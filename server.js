@@ -7,18 +7,15 @@ var port = 3000;
 
 var app = express();
 
-// Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static(process.cwd() + "/public"));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// Override with POST having ?_method=DELETE
 app.use(methodOverride("_method"));
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// Import routes
 var routes = require("./controllers/burgers_Controller.js");
 
 app.use("/", routes);
