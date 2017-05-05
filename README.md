@@ -1,5 +1,4 @@
-# burger
-Eat-Da-Burger
+# Eat-Da-Burger
 
 connect mySQL database and Express to handle routing
 
